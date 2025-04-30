@@ -7,10 +7,17 @@ Este é um jogo interativo feito com Python e Tkinter, onde o usuário tenta adi
 - Interface gráfica simples com Tkinter.
 - Entrada via botão **Verificar** ou tecla **Enter**.
 - Número secreto aleatório entre 0 e 10 a cada rodada.
+- Ao acertar, o jogo exibe a **porcentagem de acerto da rodada**, calculando com base no número de tentativas até o acerto.
 - Exibição em tempo real das estatísticas:
   - Total de tentativas
   - Quantidade de acertos
   - Quantidade de erros
+
+## 📊 Estatísticas exibidas
+
+- **Tentativas:** total de vezes que o usuário tentou adivinhar.
+- **Acertos:** total de vezes que o usuário acertou.
+- **Erros:** total de vezes que o usuário errou.
 
 ## 💻 Pré-requisitos
 
@@ -41,3 +48,6 @@ O jogo gera automaticamente um novo número após cada tentativa.
 
 ## 📸 Exemplo da interface
 <img src="./image.png" alt="interface do jogo" width="50%">
+
+## 📸 Exemplo da interface Porcentagem
+<img src="./image copy.png" alt="interface da Procentagem" width="50%">

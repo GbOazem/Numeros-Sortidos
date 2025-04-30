@@ -11,25 +11,35 @@ numero_secreto = gerar_novo_numero()
 acertos = 0
 erros = 0
 tentativas = 0
+tentativas_rodada = 0
 
-# Função para atualizar o texto das estatísticas
+# Atualiza estatísticas na interface
 def atualizar_estatisticas():
     estatisticas['text'] = f"Tentativas: {tentativas} | Acertos: {acertos} | Erros: {erros}"
 
-# Função principal para verificar número
+# Verifica o número digitado
 def verificar_numero(event=None):
-    global numero_secreto, acertos, erros, tentativas
+    global numero_secreto, acertos, erros, tentativas, tentativas_rodada
     try:
         numero_escolhido = int(entrada.get())
         if 0 <= numero_escolhido <= 10:
             tentativas += 1
+            tentativas_rodada += 1
             if numero_escolhido == numero_secreto:
                 acertos += 1
-                messagebox.showinfo("Resultado", "Parabéns! Você acertou!")
+                porcentagem = (1 / tentativas_rodada) * 100
+                messagebox.showinfo(
+                    "Resultado",
+                    f"Parabéns! Você acertou!\n"
+                    f"Tentativas nessa rodada: {tentativas_rodada}\n"
+                    f"Porcentagem de acerto: {porcentagem:.2f}%"
+                )
+                numero_secreto = gerar_novo_numero()
+                tentativas_rodada = 0  # reinicia para próxima rodada
             else:
                 erros += 1
                 messagebox.showinfo("Resultado", f"Que pena! O número era {numero_secreto}. Tente novamente!")
-            numero_secreto = gerar_novo_numero()
+                numero_secreto = gerar_novo_numero()
             entrada.delete(0, tk.END)
             atualizar_estatisticas()
         else:
