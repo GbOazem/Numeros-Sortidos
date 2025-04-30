@@ -24,9 +24,11 @@ Este programa usa apenas bibliotecas padrão do Python. Ou seja, **não é neces
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/jogo-adivinhacao-python.git
-cd jogo-adivinhacao-python
+git clone https://github.com/GbOazem/Numeros-Sortidos.git
 ```
+
+> Depois disso só executar o arquivo python localmente
+
 
 ## 🧠 Como jogar
 Digite um número entre 0 e 10.
