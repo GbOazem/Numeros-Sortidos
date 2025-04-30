@@ -38,4 +38,4 @@ Veja se acertou ou não.
 O jogo gera automaticamente um novo número após cada tentativa.
 
 ## 📸 Exemplo da interface
-<img src="./image.png" alt="interface do jogo" width="100%">
+<img src="./image.png" alt="interface do jogo" width="50%">
